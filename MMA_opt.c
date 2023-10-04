@@ -5,7 +5,7 @@
 #include "{nlopt_home_directory}\nlopt.h"
 
 #define SIZE (46)
-#define LIB_NAME "One_Fractions_new.dll"    // Library that contains 
+#define LIB_NAME "One_Fractions_new.dll"    // Library that contains functions that calculate S parameter
 #define CALC_NAME "CALCULATE_S"             // name of forward solver  that takes filter configuration as input and writes S-parameter into S_PAR
 #define CALC_PRINT_NAME "CALCULATE_S_WITHSAVE"
 #define false (0)
