@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <time.h>
-#include "C:\Users\Sandro\Desktop\uni\TO\codes\nlopt\nlopt\src\api\nlopt.h"
+#include "{nlopt_home_directory}\nlopt.h"
 
 #define SIZE (46)
-#define LIB_NAME "One_Fractions_new.dll"
-#define CALC_NAME "CALCULATE_S"
+#define LIB_NAME "One_Fractions_new.dll"    // Library that contains 
+#define CALC_NAME "CALCULATE_S"             // name of forward solver  that takes filter configuration as input and writes S-parameter into S_PAR
 #define CALC_PRINT_NAME "CALCULATE_S_WITHSAVE"
 #define false (0)
 #define true (1)
@@ -31,18 +31,10 @@ SUB_WS calc_s_ws;
 const double A = 5.075e-3;
 int LAY_M = 4;
 double* S_PAR;
-// double ideal[] = {0.002176, 0.004369, 0.009583, 0.023721, 0.069401, 0.088145,
-//                  0.112899, 0.145750, 0.189398, 0.247112, 0.322319, 0.417455,
-//                  0.531767, 0.658455, 0.783347, 0.888349, 0.959585, 0.994013,
-//                  0.994986, 0.969038, 0.940275, 0.921247, 0.916528, 0.926231,
-//                  0.947418, 0.973853, 0.995152, 0.997085, 0.965412, 0.917989,
-//                  0.851448, 0.770967, 0.683565, 0.596071, 0.513684, 0.439498,
-//                  0.374760, 0.319441, 0.272788, 0.233733, 0.201145, 0.122289,
-//                  0.068552, 0.042943, 0.029354, 0.021492};
-// double ideal[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.707106,
+// double ideal[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5,
 //                   0.99999, 0.99999, 0.99999, 0.99999, 0.99999, 0.99999,
 //                   0.99999, 0.99999, 0.99999, 0.99999, 0.99999, 0.99999,
-//                   0.99999, 0.99999, 0.99999, 0.707106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//                   0.99999, 0.99999, 0.99999, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 //                   0, 0, 0, 0, 0};
 double ideal[SIZE];
 int num_obj = 0;
